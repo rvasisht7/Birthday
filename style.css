@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Present Wrapper (Centered) */
+.present-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Present Box */
+.present {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    background: #ff4e50;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.lid {
+    width: 150px;
+    height: 50px;
+    background: #fc913a;
+    position: absolute;
+    top: 0;
+    border-radius: 10px 10px 0 0;
+    transform-origin: top center;
+    transition: transform 0.5s ease;
+}
+
+.ribbon {
+    width: 30px;
+    height: 100%;
+    background: #f9d423;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Hint with Arrow */
+.hint {
+    position: absolute;
+    top: -50px; /* Adjust position relative to the present */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    animation: bounce 1.5s infinite;
+}
+
+.hint p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+}
+
+/* Bounce Animation for Hint */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Message */
+#message {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
